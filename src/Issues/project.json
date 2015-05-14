@@ -1,0 +1,47 @@
+{
+  "webroot": "wwwroot",
+  "userSecretsId": "aspnet5-Issues-db48eb5a-b278-4d9d-a40a-26654ee0b106",
+  "version": "1.0.0-*",
+  "dependencies": {
+    "Microsoft.AspNet.Mvc": "6.0.0-beta4",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta4",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-beta4",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-beta4",
+    "Microsoft.AspNet.Tooling.Razor": "1.0.0-beta4",
+    "Microsoft.Framework.Caching.Memory": "1.0.0-beta4",
+    "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta4",
+    "Microsoft.Framework.ConfigurationModel.UserSecrets": "1.0.0-beta4",
+    "Microsoft.Framework.CodeGenerators.Mvc": "1.0.0-beta4",
+    "Microsoft.Framework.Logging": "1.0.0-beta4",
+    "Microsoft.Framework.Logging.Console": "1.0.0-beta4",
+    "Kestrel": "1.0.0-beta4",
+    "octokit": "0.11.0"
+  },
+  "commands": {
+    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5001"
+  },
+  "frameworks": {
+    "dnx451": {}
+  },
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ],
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+  "scripts": {
+    "postrestore": [
+      "npm install",
+      "bower install"
+    ],
+    "prepare": [
+      "gulp default"
+    ]
+  }
+}

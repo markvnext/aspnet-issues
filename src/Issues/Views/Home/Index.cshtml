@@ -1,0 +1,15 @@
+@model IList<string>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+<h1>Milestones</h1>
+</div>
+@foreach (var milestone in Model)
+{
+<div class="row">
+	<a asp-controller="Milestone" asp-action="Index" asp-route-milestone="@milestone"><h2>@milestone</h2></a>
+</div>
+}
